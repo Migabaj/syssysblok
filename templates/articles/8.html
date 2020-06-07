@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <title>
+                    ССБъ
+                </title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" type="text/css" href="../../static/style.css?q=7">
+            </head>
+            <body>
+                <div class="header">
+                    <span>
+                      <a href="/">
+                        СИСТЕМНЫЙ СИСТЕМНЫЙ БЛОК{Ъ}
+                      </a>
+                    </span>
+                    <span class="more">
+                      <a href="generate.html">
+                        СГЕНЕРИРОВАТЬ СТАТЬЮ
+                      </a>
+                    </span>
+                </div>
+                <div class="content-with-heading">
+                    <h1 class="heading">
+                        {{article[1]}}
+                    </h1>
+                <div class="art-text">
+                    {% for par in article[2].split("
+") %}
+                        <p>{{par}}</p><br>
+                    {% endfor %}
+                </div>
+                </div>
+            </body>    
+            

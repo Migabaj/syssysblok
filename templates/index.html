@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ССБъ</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../static/style.css?q=7">
+</head>
+<body>
+  <div class="header">
+    <span>
+      <a href="/index">
+        СИСТЕМНЫЙ СИСТЕМНЫЙ БЛОК{Ъ}
+      </a>
+    </span>
+    <span class="more">
+      <a href="/generate">
+        СГЕНЕРИРОВАТЬ СТАТЬЮ
+      </a>
+    </span>
+  </div>
+{% for row in articles %}
+<div class="row">
+  {% for article in row %}
+  <div class="col-grid">
+    <form method="get">
+      <button type="button" class="btn-link" onclick="location.href='articles/{{article[0]}}.html'">
+        <div>
+          <img class="card-image" src="../static/images/blok.jpg">
+        </div>
+        <div class="article-heading-link">
+          {{article[1]}}
+        </div>
+      </button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+
+</body>
+</html>
